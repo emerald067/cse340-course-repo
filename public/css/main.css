@@ -98,3 +98,23 @@ footer {
         padding: 1.25rem;
     }
 }
+
+.category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: .5rem;
+}
+
+.category-tags a {
+    background: #0a9396;
+    color: white;
+    padding: .35rem .8rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+.category-tags a:hover {
+    background: #005f73;
+}
