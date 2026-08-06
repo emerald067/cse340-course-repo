@@ -98,7 +98,7 @@ const processEditOrganizationForm = async (req, res) => {
     // Set a success flash message
     req.flash('success', 'Organization updated successfully!');
 
-    res.redirect(`/organization/${organizationId}`);
+    res.redirect(`/organizations/${organizationId}`);
 };
 
 // Export any controller functions
