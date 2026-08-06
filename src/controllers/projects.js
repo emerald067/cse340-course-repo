@@ -110,6 +110,18 @@ const processEditProjectForm = async (req, res) => {
 
     const id = req.params.id;
 
+    // Check for validation errors
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        // Loop through validation errors and flash them
+        errors.array().forEach((error) => {
+            req.flash('error', error.msg);
+        });
+
+        // Redirect back to the new project form
+        return res.redirect(`/edit-project/${id}`);
+    }
+
     const {
         title,
         description,
